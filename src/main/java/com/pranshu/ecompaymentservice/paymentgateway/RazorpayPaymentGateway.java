@@ -1,13 +1,16 @@
-package com.pranshu.ecompaymentservice.paymentgateways;
+package com.pranshu.ecompaymentservice.paymentgateway;
 
 import com.razorpay.PaymentLink;
 import com.razorpay.RazorpayClient;
 import com.razorpay.RazorpayException;
 import org.json.JSONObject;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
+@Primary
 @Service
 public class RazorpayPaymentGateway implements PaymentGateway {
+
     private RazorpayClient razorpayClient;
 
     public RazorpayPaymentGateway(RazorpayClient razorpayClient) {

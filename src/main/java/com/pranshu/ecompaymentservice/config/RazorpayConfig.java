@@ -1,4 +1,4 @@
-package com.pranshu.ecompaymentservice.configs;
+package com.pranshu.ecompaymentservice.config;
 
 import com.razorpay.RazorpayClient;
 import com.razorpay.RazorpayException;
@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class RazorpayConfig {
+
     @Value("${razorpay.key.id}")
     private String razorPayKeyId;
 
